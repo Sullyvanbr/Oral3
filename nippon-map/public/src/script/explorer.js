@@ -10,7 +10,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r
 // La variable "lieux" est créée par PHP dans ViewExplorer (données de la BDD).
 // Les noms sont ceux des colonnes : name_place, japanese_name, emoji, lat, lon, description
 lieux.forEach(function(lieu) {
-    // Icône : on utilise textContent (et pas de HTML en texte) pour éviter d'injecter du code
+    //On utilise textContent pour éviter d'injecter du code
     const emoji = document.createElement('div');
     emoji.className = 'marqueur-emoji';
     emoji.textContent = lieu.emoji || '📍';
